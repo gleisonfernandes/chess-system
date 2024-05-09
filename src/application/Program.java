@@ -3,7 +3,7 @@ package application;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import chess.ChassMatch;
+import chess.ChessMatch;
 import chess.ChessException;
 import chess.ChessPiece;
 import chess.ChessPosition;
@@ -13,12 +13,12 @@ public class Program {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		ChassMatch chessMatch = new ChassMatch();
+		ChessMatch chessMatch = new ChessMatch();
 
 		while (true) {
 			try {
 				UI.clearScreen();
-				UI.printBoard(chessMatch.getPieces());
+				UI.printMatch(chessMatch);
 				System.out.println();
 				System.out.print("Source: ");
 				ChessPosition source = UI.readChessPosition(sc);
